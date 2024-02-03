@@ -322,6 +322,7 @@
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
                 android:paddingStart="12dp"
+                android:layout_marginTop="10dp"
                 android:paddingEnd="12dp"/>
         </LinearLayout>
     </ScrollView>
@@ -329,20 +330,21 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:padding="4dp"
+            android:padding="12dp"
             android:background="@drawable/editext_background"
-            app:fabCradleMargin="8dp"
+            app:fabCradleMargin="6dp"
+            style="@style/Widget.MaterialComponents.BottomAppBar"
             app:fabCradleRoundedCornerRadius="50dp"
             android:layout_gravity="bottom"
-            app:fabCradleVerticalOffset="6dp"
             android:layout_height="wrap_content">
-            <LinearLayout
+                <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center">
@@ -457,12 +459,12 @@
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="TODO"
             android:src="@drawable/qrcode"
             app:backgroundTint="@color/purple_DArk"
             app:layout_anchor="@id/appbar"
-            app:layout_anchorGravity="center_horizontal|top"
             app:maxImageSize="30dp"
+            app:shapeAppearanceOverlay="@style/RoundFab"
+            android:layout_marginBottom="50dp"
             app:tint="@color/white" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
